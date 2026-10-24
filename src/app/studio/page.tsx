@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { ClosingCta } from "@/components/layout/ClosingCta";
+import { PageHero } from "@/components/layout/PageHero";
 import { ArrowUpRight, Box, Layers, PenTool, Sliders } from "lucide-react";
 import { Reveal, ImageReveal, StaggerContainer, StaggerItem } from "@/components/motion";
 
@@ -43,30 +44,13 @@ export default function StudioPage() {
   return (
     <div className="w-full">
       {/* Studio Hero */}
-      <section className="relative h-80 md:h-[450px] flex items-center justify-center text-center text-white bg-black">
-        <Image
-          src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop"
-          alt="GALERYA Design Studio Workspace"
-          fill
-          priority
-          className="object-cover opacity-45"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 pt-16 px-4">
-          <Reveal direction="up">
-            <span className="text-[11px] uppercase tracking-widest text-[#f05c1a] font-semibold block mb-2">
-              Research & Design
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">
-              Design Studio
-            </h1>
-            <p className="text-xs md:text-sm text-white/80 font-light mt-3 max-w-xl mx-auto leading-relaxed">
-              Where natural Indonesian materials meet architectural discipline, material science, and modern manufacturing rigor.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Research & Design"
+        title="Design Studio"
+        subtitle="Where natural Indonesian materials meet architectural discipline, material science, and modern manufacturing rigor."
+        imageSrc="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop"
+        imageAlt="GALERYA Design Studio Workspace"
+      />
 
       {/* Studio Philosophy */}
       <section className="py-20 md:py-28 bg-white text-[#1b1b1b]">

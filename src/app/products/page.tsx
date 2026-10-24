@@ -7,6 +7,7 @@ import { PRODUCTS } from "@/data/products";
 import { PRODUCT_CATEGORIES } from "@/data/brand";
 import { ProductCard } from "@/components/products/ProductCard";
 import { ClosingCta } from "@/components/layout/ClosingCta";
+import { PageHero } from "@/components/layout/PageHero";
 import { Search, RotateCcw } from "lucide-react";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/motion";
 
@@ -50,27 +51,13 @@ export default function ProductsPage() {
   return (
     <div className="w-full">
       {/* Hero Banner */}
-      <section className="relative h-72 md:h-96 flex items-center justify-center text-center text-white bg-black">
-        <Image
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1600&auto=format&fit=crop"
-          alt="GALERYA Products"
-          fill
-          priority
-          className="object-cover opacity-50"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 pt-16">
-          <Reveal direction="up">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">
-              Products
-            </h1>
-            <p className="text-xs md:text-sm text-white/80 font-light mt-2 max-w-md mx-auto">
-              Architectural indoor, outdoor, and decorative furniture handcrafted in Indonesia.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Curated Collections"
+        title="Products"
+        subtitle="Architectural indoor, outdoor, and decorative furniture handcrafted in Indonesia."
+        imageSrc="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1600&auto=format&fit=crop"
+        imageAlt="GALERYA Products"
+      />
 
       {/* Main Catalog Section */}
       <section className="py-20 bg-white text-[#1b1b1b]">

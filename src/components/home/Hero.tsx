@@ -13,10 +13,10 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center text-center text-white overflow-hidden bg-black">
       {/* Background Hero Image with Subtle Scale Settle */}
       <motion.div
-        initial={shouldReduceMotion ? { scale: 1, opacity: 0.6 } : { scale: 1.08, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.6 }}
+        initial={shouldReduceMotion ? { scale: 1, opacity: 1 } : { scale: 1.08, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease: motionConfig.ease }}
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 z-0"
       >
         <Image
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop"
@@ -26,7 +26,7 @@ export function Hero() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-radial from-black/20 via-black/45 to-black/80" />
+        <div className="absolute inset-0 bg-black/40" />
       </motion.div>
 
       {/* Hero Content */}

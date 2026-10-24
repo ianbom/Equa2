@@ -6,6 +6,7 @@ import { PRODUCTS } from "@/data/products";
 import { PRODUCT_CATEGORIES } from "@/data/brand";
 import { ProductCard } from "@/components/products/ProductCard";
 import { ClosingCta } from "@/components/layout/ClosingCta";
+import { PageHero } from "@/components/layout/PageHero";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/motion";
 
 interface CategoryPageProps {
@@ -42,30 +43,13 @@ export default async function ProductCategoryPage({
   return (
     <div className="w-full">
       {/* Category Hero Banner */}
-      <section className="relative h-72 md:h-96 flex items-center justify-center text-center text-white bg-black">
-        <Image
-          src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?q=80&w=1600&auto=format&fit=crop"
-          alt={currentCategory.title}
-          fill
-          priority
-          className="object-cover opacity-50"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 pt-16">
-          <Reveal direction="up">
-            <span className="text-[11px] uppercase tracking-widest text-[#f05c1a] font-semibold block mb-2">
-              Collection
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">
-              {currentCategory.title}
-            </h1>
-            <p className="text-xs md:text-sm text-white/80 font-light mt-2 max-w-md mx-auto">
-              Discover our curated {currentCategory.title.toLowerCase()} handcrafted for timeless living spaces.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Collection"
+        title={currentCategory.title}
+        subtitle={`Discover our curated ${currentCategory.title.toLowerCase()} handcrafted for timeless living spaces.`}
+        imageSrc="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?q=80&w=1600&auto=format&fit=crop"
+        imageAlt={currentCategory.title}
+      />
 
       {/* Main Content */}
       <section className="py-20 bg-white text-[#1b1b1b]">

@@ -11,7 +11,6 @@ import { Menu, X, ChevronDown, ChevronRight, ArrowUpRight } from "lucide-react";
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,8 +31,21 @@ export function Header() {
     setIsMobileMenuOpen(false);
   }, [pathname]);
 
-  // Determine header appearance: transparent on top of homepage, solid white otherwise
-  const isTransparent = isHome && !isScrolled && !isMegaMenuOpen;
+  // Determine header appearance: transparent on top of pages with full hero, solid white otherwise
+  const FULL_HERO_ROUTES = [
+    "/",
+    "/about-us",
+    "/studio",
+    "/products",
+    "/catalog",
+    "/gallery",
+    "/sustainability",
+    "/careers",
+  ];
+  const hasFullHero =
+    FULL_HERO_ROUTES.includes(pathname) ||
+    pathname.startsWith("/product-category/");
+  const isTransparent = hasFullHero && !isScrolled && !isMegaMenuOpen;
 
   const featuredPreview = PRODUCTS.slice(0, 3);
 

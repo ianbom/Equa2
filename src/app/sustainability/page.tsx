@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import { ClosingCta } from "@/components/layout/ClosingCta";
+import { PageHero } from "@/components/layout/PageHero";
 import { ArrowUpRight, CheckCircle2, Feather, HeartHandshake, Leaf, Recycle } from "lucide-react";
 import { Reveal, ImageReveal, StaggerContainer, StaggerItem } from "@/components/motion";
 
@@ -39,30 +40,13 @@ export default function SustainabilityPage() {
   return (
     <div className="w-full">
       {/* Sustainability Hero */}
-      <section className="relative h-80 md:h-[450px] flex items-center justify-center text-center text-white bg-black">
-        <Image
-          src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1600&auto=format&fit=crop"
-          alt="Indonesian sustainable plantation forest canopy"
-          fill
-          priority
-          className="object-cover opacity-45"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 pt-16 px-4">
-          <Reveal direction="up">
-            <span className="text-[11px] uppercase tracking-widest text-[#f05c1a] font-semibold block mb-2">
-              Conscious Craft
-            </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white">
-              Sustainability
-            </h1>
-            <p className="text-xs md:text-sm text-white/80 font-light mt-3 max-w-xl mx-auto leading-relaxed">
-              Honoring the Indonesian earth through responsible forestry, circular workshop practices, and ethical artisan welfare.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Conscious Craft"
+        title="Sustainability"
+        subtitle="Honoring the Indonesian earth through responsible forestry, circular workshop practices, and ethical artisan welfare."
+        imageSrc="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1600&auto=format&fit=crop"
+        imageAlt="Indonesian sustainable plantation forest canopy"
+      />
 
       {/* Sustainable Philosophy */}
       <section className="py-20 md:py-28 bg-white text-[#1b1b1b]">
