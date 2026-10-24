@@ -1,0 +1,88 @@
+import { GalleryItem } from "@/types";
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: "gal-1",
+    title: "Minimalist Living Room Suite",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+  {
+    id: "gal-2",
+    title: "Handcrafted Rattan & Teak Lounge",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1200&auto=format&fit=crop",
+    aspect: "portrait",
+  },
+  {
+    id: "gal-3",
+    title: "Sunlit Architectural Veranda",
+    category: "outdoor",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+  {
+    id: "gal-4",
+    title: "Solid Oak Dining Arrangement",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+  {
+    id: "gal-5",
+    title: "Poolside Teak Recliners",
+    category: "outdoor",
+    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+  {
+    id: "gal-6",
+    title: "Sculptural Credenza & Ceramic Accent",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=1200&auto=format&fit=crop",
+    aspect: "portrait",
+  },
+  {
+    id: "gal-7",
+    title: "Terrace Woven Armchairs",
+    category: "outdoor",
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1200&auto=format&fit=crop",
+    aspect: "portrait",
+  },
+  {
+    id: "gal-8",
+    title: "Bespoke Ceramic Lighting & Shadow",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=1200&auto=format&fit=crop",
+    aspect: "square",
+  },
+  {
+    id: "gal-9",
+    title: "Natural Cane Screen & Armchair",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?q=80&w=1200&auto=format&fit=crop",
+    aspect: "portrait",
+  },
+  {
+    id: "gal-10",
+    title: "Circular Outdoor Veranda Seating",
+    category: "outdoor",
+    image: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+  {
+    id: "gal-11",
+    title: "Artisan Joinery Detail",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+  {
+    id: "gal-12",
+    title: "Linen Modular Sectional in Studio",
+    category: "indoor",
+    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop",
+    aspect: "landscape",
+  },
+];
